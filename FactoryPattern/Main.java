@@ -12,6 +12,6 @@ public class Main {
         Vehicle bike = VehicleFactory.getVehicle("bike");
         bike.design();
         bike.manufacture();
-        
+         
     }
 }
