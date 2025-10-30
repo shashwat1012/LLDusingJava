@@ -8,6 +8,7 @@ public class Board {
     public PlayingPiece[][] board;
     public Board(int size) {
         this.size = size;
+        this.board = new PlayingPiece[size][size];
     }
     public boolean addPiece(int row,int column,PlayingPiece playingPiece) {
         if(board[row][column] != null){
@@ -40,7 +41,6 @@ public class Board {
                 System.out.print(" | ");
             }
             System.out.println();
-
         }
     }
 }
