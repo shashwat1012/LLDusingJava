@@ -11,6 +11,6 @@ public class NullPattern {
         Vehicle validVehicle = VehicleFactory.getVehicle("CAR");
         System.out.println(validVehicle.getSeatCapacity());
         System.out.println(validVehicle.getTankCapacity());
-        
+        System.out.println(validVehicle.getWheels(5));
     }
 }
