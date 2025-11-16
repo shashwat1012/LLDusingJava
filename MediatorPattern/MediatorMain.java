@@ -23,14 +23,12 @@ public class MediatorMain {
         chatRoom.addUser(riya);
         chatRoom.addUser(booba);
 
-        try (ExecutorService executor = Executors.newFixedThreadPool(3)) {
-
+        ExecutorService executor = Executors.newFixedThreadPool(3);
+        try {
             for (Users user : usersList) {
-                executor.submit(() -> {
-                    user.sendMessage("I am " + user.getName());
-                });
+                executor.submit(() -> user.sendMessage("I am " + user.getName()));
             }
-
+        } finally {
             executor.shutdown();
         }
     }
